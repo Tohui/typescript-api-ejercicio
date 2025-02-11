@@ -1,0 +1,15 @@
+Ejercicio: CRUD de "productos"
+
+Crea una API con Express y TypeScript que maneje una tabla llamada products en MySQL. La API debe permitir:
+    Crear un producto (POST /products)              --> Listo
+    Obtener todos los productos (GET /products)      --> Listo
+    Obtener un producto por ID (GET /products/:id)  --> Listo
+    Actualizar un producto (PUT /products/:id)
+    Eliminar un producto (DELETE /products/:id)     --> Listo
+
+Estructura sugerida:
+    database/db.ts → Configuración de conexión a MySQL
+    modules/products/products.repository.ts → Consultas SQL
+    modules/products/products.service.ts → Lógica de negocio
+    modules/products/products.controller.ts → Manejo de las peticiones
+    modules/products/products.module.ts → Definición de rutas
