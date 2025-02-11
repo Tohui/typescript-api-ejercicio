@@ -1,4 +1,4 @@
-import { productsRepository } from './modules/products/products.repository';
+import { productsRepository } from '../modules/products/products.repository';
 
 const errorMessage = (error:(any | unknown)) => {
     console.log(`Error al ejecutar la función: ${error}`)
@@ -61,5 +61,5 @@ const prueba5 = async () => {
 //prueba3()
 
 //prueba5()
-prueba2()
+//prueba2()
 

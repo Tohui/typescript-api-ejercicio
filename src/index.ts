@@ -1,5 +1,6 @@
 import app from './app'
-import './sandboxRepository';
+import './sandbox/sandboxRepository';
+import './sandbox/sandboxservice';
 
 const PORT:number = 3000;
 
