@@ -39,7 +39,7 @@ export  class productsRepository {
    }
 
    async update(id:string, name:string, description:string){
-      await this.queryExecute("UPDATE items SET name = ?, description = ? WHERE id = ?",[name, description, id])
+     await this.queryExecute("UPDATE items SET name = ?, description = ? WHERE id = ?",[name, description, id])
    }
 
 
