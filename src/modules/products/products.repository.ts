@@ -17,33 +17,22 @@ export  class productsRepository {
    private async queryExecute(sql: string, params: any[]): Promise<void> {
       await pool.query(sql, params);
   }
-  
+  //==============================================================================
 
+  findById = async (id: string) => 
+   this.queryOne("SELECT * FROM items WHERE id = ?", [id]);
 
+  findAll = async () => 
+   this.queryRows('SELECT * FROM items', []);
 
-   async findById(id:string){
-    return await this.queryOne("select * from items where id = ?",[id])
-   }
+  deleteById = async (id: string) => 
+   this.queryExecute('DELETE FROM items WHERE id = ?', [id]);
 
-   async findAll(){
-      return await this.queryRows('Select * from items', [])
-   }
+  create = async (name: string, description: string) => 
+   this.queryExecute('INSERT INTO items (name, description) VALUES (?, ?)', [name, description]);
 
-   async deleteById (id:string){
-      await this.queryExecute('DELETE FROM items WHERE id = ? ',[id])
-      
-   }
-
-   async create(name:string, description:string){
-      await this.queryExecute('INSERT INTO items (name, description) values (?, ?)',[name, description])
-   }
-
-   async update(id:string, name:string, description:string){
-     await this.queryExecute("UPDATE items SET name = ?, description = ? WHERE id = ?",[name, description, id])
-   }
-
-
-   
+  update = async (id: string, name: string, description: string) => 
+   this.queryExecute("UPDATE items SET name = ?, description = ? WHERE id = ?", [name, description, id]);
 }
 
 

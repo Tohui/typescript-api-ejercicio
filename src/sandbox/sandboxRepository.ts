@@ -10,7 +10,7 @@ const prueba = async () => {
     const repository = new productsRepository();
 
     try {
-        const result = await repository.findById('2'); // Cambia el ID según lo que quieras probar
+        const result = await repository.findById('3'); // Cambia el ID según lo que quieras probar
         console.log(result); // Muestra el resultado en consola
     } catch (error) {
         console.error('Error al ejecutar la función:', error);

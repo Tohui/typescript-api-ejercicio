@@ -3,7 +3,7 @@ import { productsService } from "../modules/products/products.service";
 const service = new productsService();
 
 async function testServicegetById() {
-        const result = await service.getItemById("3"); // Cambia por un ID válido en tu DB
+        const result = await service.getItemById("6"); // Cambia por un ID válido en tu DB
         console.log("Resultado:", result);
 }
 
@@ -28,6 +28,6 @@ const testServiceUpdate = async () => {
 //testServicegetById();
 //testServiceDeleteById()
 
-testServiceFindAll()
+//testServiceFindAll()
 //testServiceCreate()
-testServiceUpdate()
+//testServiceUpdate()
